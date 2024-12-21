@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "vite",
+			"type": "shell",
+			"group": "build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": true
+			},
+			"isBackground": true,
+			"problemMatcher": "$vite",
+			"command": "yarn dev"
+		},
+		{
+			"label": "killServer",
+			"type": "shell",
+			"windows": {
+				"command": "taskkill /F /IM node.exe"
+			},
+			"linux": {
+				"command": "pkill -f node"
+			},
+			"hide": true,
+			"presentation": {
+				"reveal": "never"
+			}
+		}
+	]
+}
