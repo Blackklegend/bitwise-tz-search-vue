@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+	import { useSearchStore } from '@/stores/search';
+
+	const searchStore = useSearchStore();
 </script>
 
 <template>
   <main>
-    <TheWelcome />
-  </main>
+		<div>teste {{ searchStore.searchQuery }}</div>
+	</main>
 </template>
